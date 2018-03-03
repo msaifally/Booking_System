@@ -3,19 +3,23 @@ import { NgModule } from '@angular/core';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { CalendarModule } from 'angular-calendar';
 import { AppComponent } from './app.component';
-import { LoginComponentComponent } from './Components/login-component/login-component.component';
-import { MainComponentComponent } from './Components/main-component/main-component.component';
+import { MainComponent } from './Components/main/main.component';
+import { LoginComponent } from './Components/login/login.component';
+import { AppRoutingModule } from './app-routing.module';
+import { NotfoundComponent } from './Components/notfound/notfound.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    LoginComponentComponent,
-    MainComponentComponent
+    MainComponent,
+    LoginComponent,
+    NotfoundComponent
   ],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
-    CalendarModule.forRoot()
+    CalendarModule.forRoot(),
+    AppRoutingModule
   ],
   providers: [],
   bootstrap: [AppComponent]
