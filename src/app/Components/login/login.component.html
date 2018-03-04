@@ -1,3 +1,31 @@
-<p>
-  login works!
-</p>
+<div class="row height gradient ">
+  <div class="col-md-3 auto-margin">
+    <mat-card class="style">
+      <mat-card-header>
+        <mat-card-title class="text-center">LOG IN</mat-card-title>
+      </mat-card-header>
+      <mat-card-content>
+
+        <form class="display-flex" #logForm="ngForm">
+          <mat-form-field>
+            <input matInput placeholder="Enter your email address"  [(ngModel)]="username" name="username" required />
+            <mat-icon matSuffix>person_outline</mat-icon>
+          </mat-form-field>
+
+          <mat-form-field>
+            <input matInput placeholder="Enter your password" [type]="hide ? 'password' : 'text'" [(ngModel)]="password"  name="password" required/>
+            <mat-icon matSuffix (click)="hide = !hide">{{hide ? 'visibility' : 'visibility_off'}}</mat-icon>
+          </mat-form-field>
+
+          <mat-card-actions class="text-center mb-0 ">
+                          
+            <button mat-raised-button  color="primary" [disabled]="logForm.form.invalid">
+                <i  *ngIf="logForm.form.invalid" matTooltip="Required fields missing!" class="material-icons cursor-type">lock</i>
+                Authenticate</button>
+          </mat-card-actions>
+        </form>
+
+      </mat-card-content>
+    </mat-card>
+  </div>
+</div>

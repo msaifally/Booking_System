@@ -1,0 +1,46 @@
+/* .centering{
+    margin: auto;
+} */
+
+.height{
+    height: 100vh;
+}
+
+.auto-margin{
+    margin: auto;
+}
+
+.style{
+    background-color:#eee;
+}
+
+.gradient{
+    background: linear-gradient(200deg,  #670d10 0%,#092756 100%);
+}
+
+.display-flex {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .button-style{
+    margin: auto;
+    width: 45%;
+  }
+  ::ng-deep .mat-card-header-text {
+    /* CSS styles go here */
+    margin: auto; 
+    width: 100%;
+  }
+
+  .center-align{
+    text-align: center;
+  }
+
+  .align-content{
+    align-content:center;
+  }
+
+  .cursor-type{
+      cursor: pointer;
+  }
