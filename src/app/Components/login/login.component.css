@@ -44,3 +44,8 @@
   .cursor-type{
       cursor: pointer;
   }
+
+  .text-style{
+    font-size: 27px;
+    font-family: fantasy;
+  }
