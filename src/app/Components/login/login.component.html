@@ -2,7 +2,9 @@
   <div class="col-md-3 auto-margin">
     <mat-card class="style">
       <mat-card-header>
-        <mat-card-title class="text-center text-style">LOG IN</mat-card-title>
+        <mat-card-title class="text-center text-style">LOG IN
+          <!-- <mat-divider></mat-divider> -->
+        </mat-card-title>
       </mat-card-header>
       <mat-card-content>
 
@@ -23,7 +25,7 @@
 
           <mat-card-actions class="text-center mb-0 ">
                           
-            <button mat-raised-button  color="primary" type="submit" [disabled]="logForm.form.invalid">
+            <button mat-raised-button [disabled] = "logForm.form.invalid"  color="primary" type="submit" >
                 <i  *ngIf="logForm.form.invalid" matTooltip="Required fields missing!" class="material-icons cursor-type">lock</i>
                 Authenticate</button>
           </mat-card-actions>

@@ -1,3 +1,32 @@
-<p>
-  main works!
-</p>
+<mat-sidenav-container [class.custom-container-height]="mainService.isAuthenticated()">
+    <mat-sidenav class="drawer-width" #sidenav *ngIf= "mainService.isAuthenticated()" mode="side" opened="true">
+        <mat-list>
+            <mat-divider></mat-divider>
+            <mat-list-item  [routerLink]="'homepage'">
+                <span class="material-icons">home</span>
+                <span class="nav-btn-label">Home</span>
+            </mat-list-item>
+            <mat-divider></mat-divider>
+
+            <mat-list-item [routerLink]="'booking'">
+                <span class="material-icons">date_range</span>
+                <span class="nav-btn-label">Booking</span>
+            </mat-list-item>
+        </mat-list>
+    
+        
+    </mat-sidenav>
+
+    <mat-toolbar *ngIf= "mainService.isAuthenticated()" color="primary" class="toolbar-height">
+        <button mat-button (click)="toggleSideNav()">
+            <i class="material-icons">reorder</i>
+        </button>
+
+        <button mat-button (click)="logout()">
+            <i class="material-icons">power_settings_new</i>
+        </button>
+    </mat-toolbar>
+
+    <router-outlet></router-outlet>
+
+</mat-sidenav-container>

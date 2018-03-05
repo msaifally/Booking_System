@@ -10,5 +10,4 @@ export class AppComponent {
 
   view = 'month';
   viewDate: Date = new Date();
-  events: CalendarEvent[] = [];
 }

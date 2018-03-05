@@ -7,9 +7,12 @@ import { MainComponent } from './Components/main/main.component';
 import { LoginComponent } from './Components/login/login.component';
 import { AppRoutingModule } from './app-routing.module';
 import { NotfoundComponent } from './Components/notfound/notfound.component';
-import {MatCardModule, MatInputModule, MatIconModule, MatButtonModule, 
-  MatTooltipModule} from '@angular/material';
-import { FormsModule }   from '@angular/forms';
+import {BookingComponent} from './Components/booking/booking.component';
+import {HomepageComponent} from './Components/homepage/homepage.component';
+import {MatCardModule, MatInputModule, MatIconModule, MatButtonModule,
+  MatTooltipModule, MatDividerModule, MatToolbarModule, MatSidenavModule, MatListModule} from '@angular/material';
+import { FormsModule } from '@angular/forms';
+import {MainService} from './Components/main/Service/main.service';
 
 
 @NgModule({
@@ -17,7 +20,9 @@ import { FormsModule }   from '@angular/forms';
     AppComponent,
     MainComponent,
     LoginComponent,
-    NotfoundComponent
+    NotfoundComponent,
+    HomepageComponent,
+    BookingComponent
   ],
   imports: [
     BrowserModule,
@@ -29,9 +34,13 @@ import { FormsModule }   from '@angular/forms';
     MatIconModule,
     MatButtonModule,
     FormsModule,
-    MatTooltipModule
+    MatTooltipModule,
+    MatDividerModule,
+    MatToolbarModule,
+    MatSidenavModule,
+    MatListModule
   ],
-  providers: [],
+  providers: [MainService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
