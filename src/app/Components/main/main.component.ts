@@ -13,6 +13,33 @@ export class MainComponent implements OnInit {
   authenticated = false;
   constructor(private mainService: MainService, private router: Router) { }
 
+  sidenavButtons = [
+    {
+      iconName: 'home',
+      label: 'Home',
+      pageAddress: 'homepage'
+    },
+    {
+      iconName: 'date_range',
+      label: 'Booking',
+      pageAddress: 'booking'
+    },
+    {
+      iconName: 'settings',
+      label: 'Services',
+      pageAddress: 'booking'
+    },
+    {
+      iconName: 'group',
+      label: 'About us',
+      pageAddress: 'booking'
+    },
+    {
+      iconName: 'phone',
+      label: 'Contact us',
+      pageAddress: 'booking'
+    },
+  ];
   ngOnInit() {
   }
 

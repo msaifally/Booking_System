@@ -12,3 +12,19 @@
 .custom-container-height{
     height: 100vh;
 }
+.img-style {
+    max-width:100%; 
+}
+
+.label-text {
+    font-size: 21px;
+    font-family: cursive;
+}
+.icon-style{
+    padding-right: 13px !important;
+    font-weight: 600 !important;
+}
+.business-class{
+    font-family: cursive;
+    margin: auto;
+}
